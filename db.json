@@ -1,0 +1,66 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "title": "React Conference 2026",
+      "description": "Annual React developers conference with the latest talks on React 19, server components, and the React Compiler.",
+      "category": "Technology",
+      "date": "2026-07-15",
+      "time": "09:00 AM",
+      "location": "San Francisco, CA",
+      "venue": "Convention Center",
+      "image": "https://picsum.photos/seed/react/400/200",
+      "organizerName": "Tech Events Inc",
+      "ticketTypes": [
+        { "id": "t1", "name": "General", "price": 99, "available": 100 },
+        { "id": "t2", "name": "VIP", "price": 299, "available": 20 }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Summer Jazz Night",
+      "description": "An evening of live jazz under the stars.",
+      "category": "Music",
+      "date": "2026-08-10",
+      "time": "07:00 PM",
+      "location": "Central Park, NYC",
+      "venue": "Open Air Stage",
+      "image": "https://picsum.photos/seed/jazz/400/200",
+      "organizerName": "NYC Live Music",
+      "ticketTypes": [
+        { "id": "t1", "name": "Standard", "price": 45, "available": 200 }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Marathon City Run",
+      "description": "Annual 10K city marathon. All fitness levels welcome.",
+      "category": "Sports",
+      "date": "2026-09-05",
+      "time": "06:00 AM",
+      "location": "Boston, MA",
+      "venue": "Downtown Start Line",
+      "image": "https://picsum.photos/seed/marathon/400/200",
+      "organizerName": "Boston Runners Club",
+      "ticketTypes": [
+        { "id": "t1", "name": "Participant", "price": 25, "available": 500 }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Modern Art Expo",
+      "description": "A free showcase of upcoming modern artists.",
+      "category": "Arts",
+      "date": "2026-06-20",
+      "time": "10:00 AM",
+      "location": "Chicago, IL",
+      "venue": "Riverside Gallery",
+      "image": "https://picsum.photos/seed/art/400/200",
+      "organizerName": "Chicago Arts Council",
+      "ticketTypes": [
+        { "id": "t1", "name": "Entry", "price": 0, "available": 1000 }
+      ]
+    }
+  ],
+  "bookings": []
+}

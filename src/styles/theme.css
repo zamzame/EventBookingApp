@@ -1,0 +1,23 @@
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --card: #f5f5f5;
+  --border: #e0e0e0;
+  --primary: #2563eb;
+  --primary-text: #ffffff;
+  --muted: #6b7280;
+  --danger: #dc2626;
+  --success: #16a34a;
+}
+
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --text: #f1f5f9;
+  --card: #1e293b;
+  --border: #334155;
+  --primary: #3b82f6;
+  --primary-text: #ffffff;
+  --muted: #94a3b8;
+  --danger: #ef4444;
+  --success: #22c55e;
+}
