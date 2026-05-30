@@ -3,8 +3,8 @@ import { createContext, useContext, useEffect, useState } from "react";
 const ThemeContext = createContext(null);
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState(() => {
-    return localStorage.getItem("theme") || "light";
+  const [theme, setTheme] = useState(() => {  
+    return localStorage.getItem("theme") || "light"; // Initialization: if we already have theme, fetch it, otherwise assign 'light' as default
   });
 
   useEffect(() => {
