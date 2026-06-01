@@ -247,10 +247,114 @@ select {
   border-radius: 6px;
 }
 /* Temporary styles.I should refine it later */
+/* .details-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+} */
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary);
+  text-decoration: none;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.back-link:hover { text-decoration: underline; }
+
+.details-page { max-width: 800px; margin: 0 auto; }
+
 .details-image {
   width: 100%;
   max-height: 400px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 16px;
+}
+
+.details-category {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--primary-text);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.details-title {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.details-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 24px;
+  color: var(--muted);
+}
+
+.details-meta p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.details-section {
+  margin-bottom: 24px;
+}
+
+.details-section h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.ticket-list {
+  list-style: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ticket-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--card);
+}
+
+.ticket-row:last-child { border-bottom: none; }
+
+.ticket-name { font-weight: 500; }
+
+.ticket-price { font-weight: bold; color: var(--primary); }
+
+.ticket-avail { color: var(--muted); font-size: 13px; }
+
+.book-btn {
+  width: 100%;
+  padding: 14px 20px;
+  background: var(--primary);
+  color: var(--primary-text);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.book-btn:hover { opacity: 0.9; }
+
+.book-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
