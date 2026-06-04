@@ -1,14 +1,16 @@
 import {useState} from 'react';
 import {useTheme} from '../../context/ThemeContext';
+import {useUser} from '../../context/UserContext';
 
 export default function LoginPage() {
     const [name, setName] = useState('');
     // const [theme, setTheme]= useState('light');
+      const { login } = useUser();
     const { theme, toggle } = useTheme();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // if (name.trim().length >= 2) login(name);
+        if (name.trim().length >= 2) login(name);
     };
 
     return (
@@ -16,7 +18,7 @@ export default function LoginPage() {
             <button
                 type="button"
                 className="login-theme-toggle"
-                // onClick={()=>((theme === 'light') ? 'dark' : 'light')}
+                onClick={()=>((theme === 'light') ? 'dark' : 'light')}
                 onClick={toggle}
                 aria-label="Toggle theme"
             >

@@ -10,9 +10,12 @@
 //     </ThemeProvider>
 //   )
 
+
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import LoginPage from './components/login/loginPage';
+import LoginPage from './components/login/loginPage';
 import { ThemeProvider } from "./context/ThemeContext.jsx";
+import { UserProvider, useUser } from "./context/UserContext.jsx";
 import Header from "./components/Header.jsx";
 import EventsPage from "./components/events/EventsPage.jsx";
 import EventDetailsPage from "./components/events/EventDetailsPage.jsx";
@@ -22,27 +25,32 @@ import MyBookingsPage from "./components/my-bookings/MyBookingsPage.jsx";
 import "./styles/theme.css";
 import "./styles/styles.css";
 
-export default function App() {
 
-  // return (
-  //   <ThemeProvider>
-  //     <LoginPage/>
-  //   </ThemeProvider>
-  // )  
+function AppRoutes() {
+  const { user } = useUser();
+  if (!user) return <LoginPage />;
 
   return (
+    <BrowserRouter>
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<EventsPage />} />
+          <Route path="/events/:id" element={<EventDetailsPage />} />
+          <Route path="/book/:id" element={<BookingPage />} />
+          <Route path="/my-bookings" element={<MyBookingsPage />} />
+        </Routes>
+      </main>
+    </BrowserRouter>
+  );
+}
+
+export default function App() {
+  return (
     <ThemeProvider>
-      <BrowserRouter>
-        <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<EventsPage />} />
-            <Route path="/events/:id" element={<EventDetailsPage />} />
-            <Route path="/book/:id" element={<BookingPage />} />
-            <Route path="/my-bookings" element={<MyBookingsPage />} />
-          </Routes>
-        </main>
-      </BrowserRouter>
+      <UserProvider>
+          <AppRoutes />
+      </UserProvider>
     </ThemeProvider>
   );
 }
@@ -56,4 +64,4 @@ export default function App() {
   // )
 // }
 
-// export default App
+
