@@ -1,8 +1,9 @@
-/* Select the ticket quantity of each*/
 import { Minus, Plus } from "lucide-react";
 import { calcTotal } from "../helpers.js";
+import { canAdvance } from "../validators.js";
+import { formatPrice } from "../../../utils/currency.js";
 
-export default function SelectTickets({ state, dispatch}) {
+export default function SelectTickets({ state, dispatch, onCancel }) {
   const total = calcTotal(state);
 
   const changeQty = (ticketId, delta, max) => {
@@ -17,15 +18,13 @@ export default function SelectTickets({ state, dispatch}) {
 
       <ul className="ticket-pick-list">
         {state.event.ticketTypes.map((ticket) => {
-
           const qty = state.tickets[ticket.id] || 0;
           const lineTotal = qty * ticket.price;
-
           return (
             <li key={ticket.id} className="ticket-pick">
               <div>
                 <p className="tp-name">{ticket.name}</p>
-                <p className="tp-price">{ticket.price}</p>
+                <p className="tp-price">{formatPrice(ticket.price)}</p>
               </div>
 
               <div className="qty-control">
@@ -48,7 +47,8 @@ export default function SelectTickets({ state, dispatch}) {
                 </button>
               </div>
 
-              <div className="line-total">{lineTotal}</div>
+              <div className="line-total">{formatPrice(lineTotal)}</div>
+              {/* <div className="line-total">{lineTotal===0 ? '$' + lineTotal : 'Free'}</div> */}
             </li>
           );
         })}
@@ -56,9 +56,22 @@ export default function SelectTickets({ state, dispatch}) {
 
       <div className="booking-total">
         <span>Total</span>
-        <span>{total}</span>
+        <span>{formatPrice(total)}</span>
       </div>
 
+      <div className="booking-actions">
+        <button type="button" className="btn-secondary" onClick={onCancel}>
+          Cancel
+        </button>
+        <button
+          type="button"
+          className="btn-primary"
+          disabled={!canAdvance(state)}
+          onClick={() => dispatch({ type: "NEXT" })}
+        >
+          Next →
+        </button>
+      </div>
     </div>
   );
 }
