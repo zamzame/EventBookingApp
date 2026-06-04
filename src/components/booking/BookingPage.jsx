@@ -2,7 +2,7 @@ import { useState, useEffect, useReducer } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { fetchEventById } from "../../api/events.js";
 import { apiPost, apiPatch } from "../../api/client.js";
-import { bookingReducer, initialState } from "./bookingReducer.js";
+import { bookingReducer, initialState } from "./BookingReducer.js";
 import { calcTotal, buildTicketLines, generateReference} from "./helpers.js";
 import Stepper from "./Stepper.jsx";
 import SelectTickets from "./steps/SelectTickets.jsx";
