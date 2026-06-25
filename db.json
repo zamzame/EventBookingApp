@@ -22,7 +22,7 @@
           "id": "t2",
           "name": "VIP",
           "price": 299,
-          "available": 18
+          "available": 17
         }
       ]
     },
@@ -137,6 +137,31 @@
       "bookingDate": "2026-06-03",
       "referenceNumber": "BK959534",
       "id": "9Q2dqlMBL4M"
+    },
+    {
+      "userId": "u_zami",
+      "eventId": "1",
+      "eventTitle": "React Conference 2026",
+      "eventDate": "2026-07-15",
+      "tickets": [
+        {
+          "type": "VIP",
+          "quantity": 1,
+          "price": 299
+        }
+      ],
+      "attendees": [
+        {
+          "name": "Zamzameh Madjidi",
+          "email": "zamzameh.madjidi@gmail.com",
+          "phone": "1234569877"
+        }
+      ],
+      "totalAmount": 299,
+      "status": "confirmed",
+      "bookingDate": "2026-06-25",
+      "referenceNumber": "BK106201",
+      "id": "viEkk1dhWCU"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

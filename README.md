@@ -88,15 +88,6 @@ Hands on project - 1 3
     UI Library: React
     Styling: Plain CSS
     HTTP: fetch
-    
-## Local Setup
-- Node.js should be installed
-
-- Terminal 1 — fake REST API
-    npm run server      # http://localhost:3001
-
-- Terminal 2 — React app
-    npm run dev         # http://localhost:5173
 
 # Recuired Concepts    
 
