@@ -41,7 +41,6 @@ export default function BookingPage() {
 
     dispatch({ type: "SUBMIT_START" });
     // dispatch({ type: "NEXT" }); // When submitted stepper will move to "confirm"
-     dispatch({ type: "NEXT" }); // When submitted stepper will move to "confirm"
 
     const payload = {
       userId: user.id,
@@ -120,7 +119,13 @@ export default function BookingPage() {
       )}
 
       {state.step === "confirm" && (
-        <Confirmation state={state} onRetry={submitBooking}/>
+        // <Confirmation state={state} onRetry={submitBooking}/>
+        <Confirmation
+          state={state}
+          onSubmit={submitBooking}
+          onRetry={submitBooking}
+          onBack={() => dispatch({ type: "BACK" })}
+        />        
       )}
     </div>
   );

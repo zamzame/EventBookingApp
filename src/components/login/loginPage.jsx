@@ -19,7 +19,7 @@ export default function LoginPage() {
                 type="button"
                 className="login-theme-toggle"
                 onClick={()=>((theme === 'light') ? 'dark' : 'light')}
-                onClick={toggle}
+                // onClick={toggle}
                 aria-label="Toggle theme"
             >
                 {theme === 'light' ? 'Switch to dark' : 'Switch to light'}
@@ -38,7 +38,7 @@ export default function LoginPage() {
                 />
 
                 <button
-                    type="button"
+                    type="submit"
                     className="btn-primary"
                     disabled={name.trim().length <2}
                 >

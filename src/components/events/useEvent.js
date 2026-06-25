@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+// import { useQuery } from "@tanstack/react-query";
 import { fetchEventById } from "../../api/events.js";
 
 export function useEvent(id) {
