@@ -1,7 +1,7 @@
-import { useMemo, useState } from "react";
+import { useDeferredValue, useMemo, useState } from "react";
 import { useEvents } from "./useEvents.js";
 import { useFavorites } from "./useFavorites.js";
-import { useDebounce } from "../../hooks/useDebounce.js";
+// import { useDebounce } from "../../hooks/useDebounce.js";
 import {
   isUpcoming, isThisWeek, isThisMonth,
 } from "../../utils/dates.js";
@@ -18,12 +18,12 @@ export default function EventsPage() {
   const [priceFilter, setPriceFilter] = useState("all");
   const [sortBy, setSortBy] = useState("date");
 
-  const debouncedSearch = useDebounce(search, 200);
-
+  const deferredSearch = useDeferredValue(search);
+  
   const visibleEvents = useMemo(() => {
     return events
       .filter((e) =>
-        e.title.toLowerCase().includes(debouncedSearch.toLowerCase())
+        e.title.toLowerCase().includes(deferredSearch.toLowerCase())
       )
       .filter((e) => category === "all" || e.category === category)
       .filter((e) => {
@@ -52,7 +52,7 @@ export default function EventsPage() {
         }
         return 0;
       });
-  }, [events, debouncedSearch, category, dateFilter, priceFilter, sortBy]);
+  }, [events, deferredSearch, category, dateFilter, priceFilter, sortBy]);
 
   return (
     <div className="page">

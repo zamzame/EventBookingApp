@@ -1,6 +1,30 @@
-# Hands on project - 1
+# Hands on Project 2
 # Event Booking App
 A React project for the Hands-On Project assignment of React Course. Users can browse events, book tickets in a 3-step flow, manage their bookings, and toggle light/dark mode.
+
+## Events
+1. Added TanStack and staleTime configured to fetch all events 
+2. display in a grid
+3. Searchbar using useDeferredValue
+4. Filters: Category, Date and price range
+5. Sort by: date, price 
+6. Like/favorite button
+## Event Details
+1. Show event info, ticket types, and availability
+2. "Book Now" button
+## Booking Flow
+1. 3-step process: Select Ticket -> Attendee Details -> Confirmation
+2. useReducer
+3. Select Tickets: choosing type and quantity, show total
+4. Attendee Info Form with validation
+5. Confirmation with Summary 
+## MyBookings
+2. Added TanStack and staleTime, gcTime configured to fetch my bookings (upcoming, past, canceled)  
+3. Loading/error states
+4. useMutation
+5. Filter button
+#
+
 
 ## Core Features 
 1. Events Listing & Discovery
