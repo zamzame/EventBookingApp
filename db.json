@@ -22,7 +22,7 @@
           "id": "t2",
           "name": "VIP",
           "price": 299,
-          "available": 17
+          "available": 16
         }
       ]
     },
@@ -42,7 +42,7 @@
           "id": "t1",
           "name": "Standard",
           "price": 45,
-          "available": 200
+          "available": 197
         }
       ]
     },
@@ -162,6 +162,106 @@
       "bookingDate": "2026-06-25",
       "referenceNumber": "BK106201",
       "id": "viEkk1dhWCU"
+    },
+    {
+      "userId": "u_zami",
+      "eventId": "1",
+      "eventTitle": "React Conference 2026",
+      "eventDate": "2026-07-15",
+      "tickets": [
+        {
+          "type": "VIP",
+          "quantity": 1,
+          "price": 299
+        }
+      ],
+      "attendees": [
+        {
+          "name": "Zamzameh Madjidi",
+          "email": "zamzameh.madjidi@gmail.com",
+          "phone": "1221544554547"
+        }
+      ],
+      "totalAmount": 299,
+      "status": "cancelled",
+      "bookingDate": "2026-06-25",
+      "referenceNumber": "BK609124",
+      "id": "7qDo22tHbXQ"
+    },
+    {
+      "userId": "u_zami",
+      "eventId": "2",
+      "eventTitle": "Summer Jazz Night",
+      "eventDate": "2026-08-10",
+      "tickets": [
+        {
+          "type": "Standard",
+          "quantity": 1,
+          "price": 45
+        }
+      ],
+      "attendees": [
+        {
+          "name": "Zamzameh Madjidi",
+          "email": "zamzameh.madjidi@gmail.com",
+          "phone": "1236547896"
+        }
+      ],
+      "totalAmount": 45,
+      "status": "confirmed",
+      "bookingDate": "2026-06-25",
+      "referenceNumber": "BK884393",
+      "id": "aDY7EphYCfY"
+    },
+    {
+      "userId": "u_zami",
+      "eventId": "2",
+      "eventTitle": "Summer Jazz Night",
+      "eventDate": "2026-08-10",
+      "tickets": [
+        {
+          "type": "Standard",
+          "quantity": 1,
+          "price": 45
+        }
+      ],
+      "attendees": [
+        {
+          "name": "Zamzameh Madjidi",
+          "email": "zamzameh.madjidi@gmail.com",
+          "phone": "7896541236"
+        }
+      ],
+      "totalAmount": 45,
+      "status": "confirmed",
+      "bookingDate": "2026-06-25",
+      "referenceNumber": "BK397533",
+      "id": "CJa2oQcLgG8"
+    },
+    {
+      "userId": "u_zami",
+      "eventId": "2",
+      "eventTitle": "Summer Jazz Night",
+      "eventDate": "2026-08-10",
+      "tickets": [
+        {
+          "type": "Standard",
+          "quantity": 1,
+          "price": 45
+        }
+      ],
+      "attendees": [
+        {
+          "name": "Zamzameh Madjidi",
+          "email": "zamzameh.madjidi@gmail.com",
+          "phone": "7894561236"
+        }
+      ],
+      "totalAmount": 45,
+      "status": "confirmed",
+      "bookingDate": "2026-06-26",
+      "referenceNumber": "BK536966",
+      "id": "P4IRqaB09jg"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

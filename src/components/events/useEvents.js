@@ -31,16 +31,6 @@ export function useEvents() {
 //   // const [error, setError] = useState(null);
 //   // const cancelRef = useRef(false);
 
-//   const {
-//     data = [],
-//     isLoading,
-//     error,
-//   } = useQuery({
-//     queryKey: ["events"],
-//     queryFn: fetchEvents,
-//     staleTime: 1000 * 60 * 5,
-//   });  
-
 //   useEffect(() => {
 //     cancelRef.current =false;
 
